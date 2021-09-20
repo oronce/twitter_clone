@@ -1,0 +1,85 @@
+$small-size:500px!default;
+@mixin small-size {
+    @media screen and (min-width:$small-size){
+        .leftbar{
+            display: block;
+
+            .content .bottom-profil{
+                display: flex;
+            }
+
+        }
+        .main-topbar{
+            min-width:439px ;
+            width: inherit;
+      }
+      .small-device-bottom-menu{
+        display: none;
+      }
+    }
+    @for $i from 1 to 160 {
+        @media screen and (min-width:$small-size + $i){
+            .main-topbar{
+                min-width:439px + $i;
+                width: inherit;
+            }
+        }
+    }
+}
+
+@mixin medium-size($medium:1000px) {
+    @media screen and (min-width:$medium) {
+        .rightbar{
+            display: block;
+        }
+    }
+}
+
+@mixin medium2-size($medium2:1080px) {
+    @media screen and (min-width: $medium2) {
+        .rightbar{
+            min-width: 350px;
+
+
+            .content{
+                min-width: 350px;
+
+                .search-form input[type=text],.trend-tweet,.friend-suggest{
+                    width: 320px;
+                }
+            }
+
+        }
+
+    }
+}
+
+@mixin large-size($large:1265px) {
+    @media screen and (min-width: $large) {
+        .leftbar{
+            min-width: 275px;
+
+            .content{
+                min-width: 270px;
+
+                .bottom-profil .profil-name{
+                    display: block;
+                }
+
+                .bottom-profil .icon-chevron-down{
+                    display: inline;
+                }
+
+                .link .text{
+                    display: inline;
+                }
+
+                .tweet-btn{
+                    display: block;
+                }
+
+            }
+        }
+    
+    }
+}

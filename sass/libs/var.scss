@@ -1,0 +1,30 @@
+$twitter-color:rgba(29,161,242);
+$border-color:rgba(230,236,240);
+$icon-color: rgb(101, 119, 134);
+$blue-light:rgb(29, 161, 242,0.1);
+
+@function rem($size ,$font-size-body : 15px){
+    
+   @return 1rem* $size/$font-size-body;
+ 
+ }
+
+ @mixin img-profil($width:40px,$height:40px) {
+    width: $width;
+    height:$height;
+    border-radius: 50%;
+ }
+
+ @mixin rightbar-box($width:260px,$background-color: rgb(245, 248, 250),$margin-top:25px, $padding:15px 0px , $border-radius:15px ) {
+   width:$width ;
+   background-color:$background-color;
+   margin-top:$margin-top;
+   padding: $padding; 
+   border-radius: $border-radius;
+ }
+
+ @mixin center-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }

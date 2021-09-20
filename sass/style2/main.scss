@@ -1,0 +1,212 @@
+.main{
+	max-width: 600px;
+	border: 1px solid #fff;
+}
+
+/* here start the topbar of main */
+.main-topbar{
+    position: fixed;
+    top: 0;
+	min-width: 100%;
+	height: 53px;
+	background-color: #fff;
+	padding: 10px 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+    border: 1px solid $border-color;
+
+    .left-menu{
+        display: flex;
+        align-items: center;
+    }
+    .left-menu img{
+        margin-right: 20px;
+        width: 32px;
+        height:32px;
+        border-radius: 50%;
+        display: none;
+    }
+    .left-menu .accueil{
+        font-family: "sergoe","sans-serif";
+        font-weight: 700;
+        font-size: 1.27em;
+    }
+    .right-menu i{
+        color: $twitter-color;
+        font-weight: 700;
+    }
+    .right-menu {
+        position: relative;
+    }
+    .right-menu .plus1{
+        font-weight: lighter;
+        font-size: 8px;
+        position: absolute;
+        left: -5px;
+        top: -3px;
+    }
+    .right-menu .plus2{
+        font-weight: lighter;
+        font-size: 6px;
+        position: absolute;
+        left: -5px;
+        top: 9px;
+    }
+}
+.tweet{
+	margin-top: 53px;
+    padding:0 15px;
+
+    .user-love-notification{
+        font-size: rem(13px);
+        margin-left: 45px;
+        color: $icon-color;
+        display: flex;
+        i{
+            margin-right: 10px;
+           margin-top: 3px;
+        }
+
+    }
+
+    .contain{
+        display: flex;
+    }
+
+    .sidebar{
+        width:70px; 
+        height: auto;
+        border:1px solid black;
+
+        .img{
+            margin: 0 auto;
+            width: 45px;
+            height:45px;
+            border-radius: 50%;
+            display: block;
+        }
+
+    }
+    .tweet-content{
+        width: 100%;
+        border:1px solid black;
+        height: auto;
+        padding: 10px;
+        
+    }
+}
+
+.tweet-content{
+  
+    .profil-info{
+        display: flex;
+      
+        .name{
+            font-weight: 700;
+            
+        }
+        .username{
+            color:$icon-color;
+            margin:0 5px;
+          
+        }
+        .date-post{
+            color: $icon-color;
+            margin:0 5px;
+        }
+
+        &:hover .username{
+            text-decoration-line: underline;
+        }
+
+    }
+
+    .img{
+        max-width: 501px;
+        height: 285px;
+        
+        border-radius: 10px;
+    }
+    .img img{
+       max-width: 100%;
+        max-height: 100%;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .bottom-menu{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+        color: $icon-color;
+
+        a{
+            display: block;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+
+            &:hover{
+                background-color:rgb(29, 161, 242,0.1) ;
+                color: $twitter-color;
+            }
+        }
+       
+    }
+
+}
+
+
+
+/* here start the bottombar for small device */
+.small-device-bottom-menu{
+	width: 100%;
+	position:fixed;
+	bottom: 0;
+	display: flex;
+	justify-content: space-around;
+	padding: 5px 0px;
+	background-color: #fff;
+	color: $icon-color;
+	border-top: 1px solid $border-color;
+}
+.small-device-bottom-menu-li{
+
+    &.active{
+        color: $twitter-color;
+    }
+    &:first-child{
+        position: relative;
+    }
+    .dot-notification{
+        width: 5px;
+        height:5px;
+        border-radius: 50%;
+        background-color: $twitter-color;
+        position: absolute;
+        top: 9px;
+        left: 33px;
+    }
+    i{
+        font-size: 26px;
+        margin: auto;
+    }
+    a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:45px;
+        height:45px;
+
+    }
+    a:hover{
+        border-radius: 50%;
+        color: $twitter-color;
+        background-color:rgb(29, 161, 242,0.1);
+    }
+}

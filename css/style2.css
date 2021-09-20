@@ -1,0 +1,1229 @@
+:root{
+	--twitter-color:rgba(29,161,242);
+	--border-color:rgba(230,236,240);
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+ol, ul {
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: inherit;
+}
+*{
+	box-sizing: border-box;
+}
+body{
+	font-size: 15px;
+	line-height: 1.25em;
+	font-family: 'Roboto', sans-serif;
+	display: flex;
+	justify-content: center;
+}
+
+
+
+.container{
+	display: flex;
+	justify-content: center;
+	max-width: 1350px;
+}
+/*Here start the leftbar that encompasses the letf-menu*/
+.leftbar{
+	border: 1px solid black;
+	min-width: 60px;
+	padding: 10px 0px ; 
+	display: none;
+}
+.leftbar-content{
+	min-width: 60px;
+	height: 100px;
+	background-color: lightblue;
+	position: fixed;
+	overflow:auto;
+}
+.leftbar .logo{
+	color: var(--twitter-color);
+	font-size: 30px;
+	display: none;
+}
+
+/*Here start the main that encompasses the main-content*/
+.main{
+	max-width: 600px;
+	border: 1px solid #fff;
+}
+
+/* here start the topbar of main */
+.main-topbar{
+	position: fixed;
+	min-width: 100%;
+	height: 53px;
+	background-color: #fff;
+	padding: 10px 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid var(--border-color);
+	background-color: lightblue;
+}
+
+.main-topbar .left-menu{
+	display: flex;
+	align-items: center;
+}
+.main-topbar .left-menu img{
+	margin-right: 20px;
+	width: 32px;
+	height:32px;
+	border-radius: 50%;
+}
+.main-topbar .left-menu .accueil{
+	font-weight: 700;
+	font-size: 1.27em;
+}
+.main-topbar .right-menu i{
+	color: var(--twitter-color);
+	font-weight: 700;
+}
+.main-topbar .right-menu {
+	position: relative;
+}
+.main-topbar .right-menu .plus1{
+	font-weight: lighter;
+	font-size: 8px;
+	position: absolute;
+	left: -5px;
+	top: -3px;
+}
+.main-topbar .right-menu .plus2{
+	font-weight: lighter;
+	font-size: 6px;
+	position: absolute;
+	left: -5px;
+	top: 9px;
+}
+.tweet{
+	margin-top: 53px;
+	display: flex;
+	background-color: lightgrey;
+}
+.tweet .img{
+	width:70px; 
+	height: auto;
+	border:1px solid black;
+
+}
+.tweet .tweet-content{
+	width: 100%;
+	border:1px solid black;
+	height: auto;
+	padding: 10px;
+}
+/* here start the bottombar for small device */
+.small-device-bottom-menu{
+	width: 100%;
+	position:fixed;
+	bottom: 0;
+	display: flex;
+	justify-content: space-around;
+	padding: 5px 0px;
+	background-color: #fff;
+	color: rgb(101, 119, 134);
+	border-top: 1px solid var(--border-color);
+}
+.small-device-bottom-menu-li.active{
+	color: var(--twitter-color);
+}
+.small-device-bottom-menu li:first-child{
+	position: relative;
+}
+.dot-notification{
+	width: 5px;
+	height:5px;
+	border-radius: 50%;
+	background-color: var(--twitter-color);
+	position: absolute;
+	top: 9px;
+	left: 33px;
+}
+.small-device-bottom-menu-li i  {
+	font-size: 26px;
+	margin: auto;
+}
+.small-device-bottom-menu-li a  {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width:45px;
+	height:45px;
+
+}
+.small-device-bottom-menu-li a:hover{
+	border-radius: 50%;
+	color: var(--twitter-color);
+	background-color:rgb(29, 161, 242,0.1);
+}
+
+/*Here start the rightbar that encompasses the right-menu*/
+.rightbar{
+	border: 1px solid black;
+	min-width: 250px;
+	display: none;
+}
+.rightbar-content{
+	min-width: 250px;
+	background-color: lightgrey;
+	height: 300px;
+	position: fixed;
+}
+/* 
+here start is the process to maintain topbar 
+here is the process to maintain topbar
+here is the process to maintain topbar
+here is the process to maintain topbar
+here is the process to maintain topbar
+here is the process to maintain topbar
+*/
+@media screen and (min-width: 500px){
+	.leftbar{
+		display: block;
+	}
+	.main-topbar{
+		min-width:439px ;
+		width: inherit;
+  }
+  .small-device-bottom-menu{
+    display: none;
+  }
+}
+
+@media screen and (min-width: 501px) {
+  .main-topbar {
+    min-width: 440px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 502px) {
+  .main-topbar {
+    min-width: 441px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 503px) {
+  .main-topbar {
+    min-width: 442px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 504px) {
+  .main-topbar {
+    min-width: 443px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 505px) {
+  .main-topbar {
+    min-width: 444px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 506px) {
+  .main-topbar {
+    min-width: 445px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 507px) {
+  .main-topbar {
+    min-width: 446px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 508px) {
+  .main-topbar {
+    min-width: 447px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 509px) {
+  .main-topbar {
+    min-width: 448px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 510px) {
+  .main-topbar {
+    min-width: 446px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 511px) {
+  .main-topbar {
+    min-width: 447px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 512px) {
+  .main-topbar {
+    min-width: 448px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 513px) {
+  .main-topbar {
+    min-width: 449px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 514px) {
+  .main-topbar {
+    min-width: 450px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 515px) {
+  .main-topbar {
+    min-width: 451px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 516px) {
+  .main-topbar {
+    min-width: 452px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 517px) {
+  .main-topbar {
+    min-width: 453px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 518px) {
+  .main-topbar {
+    min-width: 454px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 519px) {
+  .main-topbar {
+    min-width: 455px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 520px) {
+  .main-topbar {
+    min-width: 456px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 521px) {
+  .main-topbar {
+    min-width: 457px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 522px) {
+  .main-topbar {
+    min-width: 458px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 523px) {
+  .main-topbar {
+    min-width: 459px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 524px) {
+  .main-topbar {
+    min-width: 460px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 525px) {
+  .main-topbar {
+    min-width: 461px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 526px) {
+  .main-topbar {
+    min-width: 462px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 527px) {
+  .main-topbar {
+    min-width: 463px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 528px) {
+  .main-topbar {
+    min-width: 464px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 529px) {
+  .main-topbar {
+    min-width: 465px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 530px) {
+  .main-topbar {
+    min-width: 466px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 531px) {
+  .main-topbar {
+    min-width: 467px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 532px) {
+  .main-topbar {
+    min-width: 468px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 533px) {
+  .main-topbar {
+    min-width: 469px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 534px) {
+  .main-topbar {
+    min-width: 470px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 535px) {
+  .main-topbar {
+    min-width: 471px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 536px) {
+  .main-topbar {
+    min-width: 472px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 537px) {
+  .main-topbar {
+    min-width: 473px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 538px) {
+  .main-topbar {
+    min-width: 474px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 539px) {
+  .main-topbar {
+    min-width: 475px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 540px) {
+  .main-topbar {
+    min-width: 476px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 541px) {
+  .main-topbar {
+    min-width: 477px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 542px) {
+  .main-topbar {
+    min-width: 478px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 543px) {
+  .main-topbar {
+    min-width: 479px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 544px) {
+  .main-topbar {
+    min-width: 480px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 545px) {
+  .main-topbar {
+    min-width: 481px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 546px) {
+  .main-topbar {
+    min-width: 482px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 547px) {
+  .main-topbar {
+    min-width: 483px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 548px) {
+  .main-topbar {
+    min-width: 484px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 549px) {
+  .main-topbar {
+    min-width: 485px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 550px) {
+  .main-topbar {
+    min-width: 486px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 551px) {
+  .main-topbar {
+    min-width: 487px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 552px) {
+  .main-topbar {
+    min-width: 488px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 553px) {
+  .main-topbar {
+    min-width: 489px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 554px) {
+  .main-topbar {
+    min-width: 490px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 555px) {
+  .main-topbar {
+    min-width: 491px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 556px) {
+  .main-topbar {
+    min-width: 492px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 557px) {
+  .main-topbar {
+    min-width: 493px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 558px) {
+  .main-topbar {
+    min-width: 494px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 559px) {
+  .main-topbar {
+    min-width: 495px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 560px) {
+  .main-topbar {
+    min-width: 496px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 561px) {
+  .main-topbar {
+    min-width: 497px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 562px) {
+  .main-topbar {
+    min-width: 498px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 563px) {
+  .main-topbar {
+    min-width: 499px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 564px) {
+  .main-topbar {
+    min-width: 500px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 565px) {
+  .main-topbar {
+    min-width: 501px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 566px) {
+  .main-topbar {
+    min-width: 502px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 567px) {
+  .main-topbar {
+    min-width: 503px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 568px) {
+  .main-topbar {
+    min-width: 504px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 569px) {
+  .main-topbar {
+    min-width: 505px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 570px) {
+  .main-topbar {
+    min-width: 506px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 571px) {
+  .main-topbar {
+    min-width: 507px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 572px) {
+  .main-topbar {
+    min-width: 508px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 573px) {
+  .main-topbar {
+    min-width: 509px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 574px) {
+  .main-topbar {
+    min-width: 510px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 575px) {
+  .main-topbar {
+    min-width: 511px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 576px) {
+  .main-topbar {
+    min-width: 512px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 577px) {
+  .main-topbar {
+    min-width: 513px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 578px) {
+  .main-topbar {
+    min-width: 514px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 579px) {
+  .main-topbar {
+    min-width: 515px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 580px) {
+  .main-topbar {
+    min-width: 516px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 581px) {
+  .main-topbar {
+    min-width: 517px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 582px) {
+  .main-topbar {
+    min-width: 518px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 583px) {
+  .main-topbar {
+    min-width: 519px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 584px) {
+  .main-topbar {
+    min-width: 520px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 585px) {
+  .main-topbar {
+    min-width: 521px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 586px) {
+  .main-topbar {
+    min-width: 522px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 587px) {
+  .main-topbar {
+    min-width: 523px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 588px) {
+  .main-topbar {
+    min-width: 524px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 589px) {
+  .main-topbar {
+    min-width: 525px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 590px) {
+  .main-topbar {
+    min-width: 526px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 591px) {
+  .main-topbar {
+    min-width: 527px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 592px) {
+  .main-topbar {
+    min-width: 528px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 593px) {
+  .main-topbar {
+    min-width: 529px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 594px) {
+  .main-topbar {
+    min-width: 530px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 595px) {
+  .main-topbar {
+    min-width: 531px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 596px) {
+  .main-topbar {
+    min-width: 532px;
+    width: inherit;
+  }
+}
+@media screen and (min-width: 597px) {
+  .main-topbar {
+    min-width: 533px;
+    width: inherit;
+  }
+}
+
+
+@media screen and (min-width: 598px) {
+	.main-topbar {
+	  min-width: 534px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 599px) {
+	.main-topbar {
+	  min-width: 535px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 600px) {
+	.main-topbar {
+	  min-width: 536px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 601px) {
+	.main-topbar {
+	  min-width: 537px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 602px) {
+	.main-topbar {
+	  min-width: 538px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 603px) {
+	.main-topbar {
+	  min-width: 539px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 604px) {
+	.main-topbar {
+	  min-width: 540px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 605px) {
+	.main-topbar {
+	  min-width: 541px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 606px) {
+	.main-topbar {
+	  min-width: 542px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 607px) {
+	.main-topbar {
+	  min-width: 543px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 608px) {
+	.main-topbar {
+	  min-width: 544px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 609px) {
+	.main-topbar {
+	  min-width: 545px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 610px) {
+	.main-topbar {
+	  min-width: 546px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 611px) {
+	.main-topbar {
+	  min-width: 547px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 612px) {
+	.main-topbar {
+	  min-width: 548px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 613px) {
+	.main-topbar {
+	  min-width: 549px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 614px) {
+	.main-topbar {
+	  min-width: 550px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 615px) {
+	.main-topbar {
+	  min-width: 551px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 616px) {
+	.main-topbar {
+	  min-width: 552px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 617px) {
+	.main-topbar {
+	  min-width: 553px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 618px) {
+	.main-topbar {
+	  min-width: 554px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 619px) {
+	.main-topbar {
+	  min-width: 555px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 620px) {
+	.main-topbar {
+	  min-width: 556px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 621px) {
+	.main-topbar {
+	  min-width: 557px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 622px) {
+	.main-topbar {
+	  min-width: 558px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 623px) {
+	.main-topbar {
+	  min-width: 559px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 624px) {
+	.main-topbar {
+	  min-width: 560px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 625px) {
+	.main-topbar {
+	  min-width: 561px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 626px) {
+	.main-topbar {
+	  min-width: 562px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 627px) {
+	.main-topbar {
+	  min-width: 563px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 628px) {
+	.main-topbar {
+	  min-width: 564px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 629px) {
+	.main-topbar {
+	  min-width: 565px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 630px) {
+	.main-topbar {
+	  min-width: 566px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 631px) {
+	.main-topbar {
+	  min-width: 567px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 632px) {
+	.main-topbar {
+	  min-width: 568px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 633px) {
+	.main-topbar {
+	  min-width: 569px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 634px) {
+	.main-topbar {
+	  min-width: 570px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 635px) {
+	.main-topbar {
+	  min-width: 571px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 636px) {
+	.main-topbar {
+	  min-width: 572px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 637px) {
+	.main-topbar {
+	  min-width: 573px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 638px) {
+	.main-topbar {
+	  min-width: 574px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 639px) {
+	.main-topbar {
+	  min-width: 575px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 640px) {
+	.main-topbar {
+	  min-width: 576px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 641px) {
+	.main-topbar {
+	  min-width: 577px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 642px) {
+	.main-topbar {
+	  min-width: 578px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 643px) {
+	.main-topbar {
+	  min-width: 579px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 644px) {
+	.main-topbar {
+	  min-width: 580px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 645px) {
+	.main-topbar {
+	  min-width: 581px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 646px) {
+	.main-topbar {
+	  min-width: 582px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 647px) {
+	.main-topbar {
+	  min-width: 583px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 648px) {
+	.main-topbar {
+	  min-width: 584px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 649px) {
+	.main-topbar {
+	  min-width: 585px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 650px) {
+	.main-topbar {
+	  min-width: 586px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 651px) {
+	.main-topbar {
+	  min-width: 587px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 652px) {
+	.main-topbar {
+	  min-width: 588px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 653px) {
+	.main-topbar {
+	  min-width: 589px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 654px) {
+	.main-topbar {
+	  min-width: 590px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 655px) {
+	.main-topbar {
+	  min-width: 591px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 656px) {
+	.main-topbar {
+	  min-width: 592px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 657px) {
+	.main-topbar {
+	  min-width: 593px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 658px) {
+	.main-topbar {
+	  min-width: 594px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 659px) {
+	.main-topbar {
+	  min-width: 595px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 660px) {
+	.main-topbar {
+	  min-width: 596px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 661px) {
+	.main-topbar {
+	  min-width: 597px;
+	  width: inherit;
+	}
+  }
+  @media screen and (min-width: 662px) {
+	.main-topbar {
+	  min-width: 598px;
+	  width: inherit;
+	}
+  }
+
+/* 
+here end is the process to maintain topbar 
+here end is the process to maintain topbar 
+here end is the process to maintain topbar 
+here end is the process to maintain topbar 
+here end is the process to maintain topbar 
+*/
+
+
+
+
+@media screen and (min-width: 1000px) {
+	.rightbar{
+		display: block;
+	}
+}
+@media screen and (min-width: 1080px) {
+	.rightbar{
+		min-width: 350px;
+	}
+	.rightbar-content{
+		min-width: 350px;
+	}
+
+} 
+@media screen and (min-width: 1265px) {
+	.leftbar{
+		min-width: 275px;
+	}
+	.leftbar-content{
+		min-width: 255px;
+	}
+
+}
